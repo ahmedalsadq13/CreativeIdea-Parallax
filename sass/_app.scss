@@ -1,0 +1,121 @@
+/* General */
+
+
+
+hr{ 
+    margin-block: 20px;
+    border:1px solid #eee;
+    box-shadow: 2px 1px 20px rgba(0,0,0,.5);
+}
+body{
+    background: $orange-mid;
+    overflow-x: hidden;
+
+}
+
+/* Start */
+.main-container{
+    display: flex;
+    height:100vh;
+    position: relative;
+    justify-content: center;
+    img{        
+        object-fit: cover;
+        position: absolute;
+            
+    }
+    #right-tree{
+        right: -450px;
+        bottom: -20px;
+    }
+    #left-tree{
+        left: -200px;
+        bottom: -20px;
+    }
+    /* Mountains */
+    @for $i from 1 through 6 {
+        #mountain#{$i}{
+            width:105%;
+            bottom: -50px;
+        }
+        #mountain#{$i}:not(#mountain#{1}){
+            bottom: 60px
+        }
+
+        #mountain#{$i}:not(#mountain#{1},#mountain#{2}){
+            bottom: 200px
+        }
+        #mountain#{$i}:not(#mountain#{1},#mountain#{2},#mountain#{3}){
+            bottom: 220px
+        }
+        #mountain#{$i}:not(#mountain#{1},#mountain#{2},#mountain#{3},#mountain#{4}){
+            bottom: 100px
+        }
+        #mountain6{
+            bottom: 420px !important
+        }
+    }
+
+    .trees-block{
+        position: absolute;
+        bottom: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;      
+        gap: 40px;
+        
+        li{margin-right:40px;margin-bottom: -80px;}
+        li:nth-of-type(odd){
+            margin-bottom: 100px;
+        }
+
+        
+    }
+
+    .birds-block{
+        display: flex;
+        gap: 70px;
+        position: absolute;
+        top: 30%;
+        right: 100px;
+        @for $var from 1 through 9 {
+            li:nth-of-type(odd){
+                margin-top: 40px;
+            }   
+        }
+    }
+    
+    #wave1{
+        width: 100%;
+    }
+    #wave2{
+        width: 50%;
+        right:0;
+    }
+    #wave3{
+        width: 50%;
+        left: 0;
+    }
+    #sun{        
+        width:10%;
+    }
+    #moon{
+        mix-blend-mode: screen;
+    }
+
+    
+}
+.story{
+    display: flex;
+    width:100%;
+    height:  120rem;
+    background-color: #FFF;
+    font-size: 2.5rem;
+    position: relative;
+    background: #3d3f66;
+    color: #FFF;
+    padding:100px 50px;
+    
+}   
+
